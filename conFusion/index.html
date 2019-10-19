@@ -32,7 +32,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -167,8 +167,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <a class="btn btn-block nav-link btn-warning" 
-                        data-toggle="modal" 
-                        data-target="#reservationModal"
+                        id="reservationButton"
                         role="button">Reserve Table
                     </a>
                 </div>
@@ -228,7 +227,7 @@
                 
             </div>
         </div>    
-        <div class="row row-content align-items-center">
+        <!-- <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3 order-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
@@ -274,7 +273,7 @@
                     </div>    
                 </div>
             </div>
-        </div>
+        </div> -->
        
     </div><!-- Ending container -->
 
@@ -344,7 +343,14 @@
                     }
                 });
             });
+            $("#reservationButton").click(function(){
+                $('#reservationModal').modal('show')
+            });
+            $("#loginButton").click(function(){
+                $('#loginModal').modal('show')
+            });
     </script>
+   
 </body>
 
 </html>
